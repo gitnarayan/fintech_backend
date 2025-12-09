@@ -1,0 +1,7 @@
+node_module
+node_modules/
+/.env
+*/.env
+**/.env
+*.env
+/ec2-fintec.pem

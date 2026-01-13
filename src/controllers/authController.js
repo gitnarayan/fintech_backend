@@ -29,7 +29,7 @@ const verifyEmailOTP = catchAsync(async (req, res) => {
 })
 const getUser = catchAsync(async (req, res) => {
     let user = await userService.getUserById(req.params.id);
-    user = await userService.getUserById(req.params.id);
+    // user = await userService.getUserById(req.params.id);
     res.status(200).send({ user });
 })
 const logInUser = catchAsync(async (req, res) => {
@@ -48,5 +48,5 @@ const logout = catchAsync(async (req, res) => {
 
 
 export default {
-    createUser, getUser, logInUser, logout, 
+    createUser, getUser, logInUser, logout, verifyEmailOTP,
 };

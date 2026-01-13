@@ -7,10 +7,7 @@ const createUser = async (bodyData) => {
     return user;
 };
 const getUserById = async (UserId) => {
-    const user = await User.findById(UserId).populate({
-        path: 'plan',
-        select: 'name price userDescription profileLimit duration'
-    }).select({ role: 0, password: 0, __v: 0 })
+    const user = await User.findById(UserId).select({ role: 0, password: 0, __v: 0 })
     return user;
 };
 // Function to get a User by their ID
